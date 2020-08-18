@@ -1,0 +1,38 @@
+/* current-temperature */
+.CurrentTemperature {
+  display: flex;
+  margin-top: 0.25em;
+  width: 100%;
+}
+
+.CurrentTemperatureIconContainer {
+  flex-grow: 1.25;
+  text-align: center;
+}
+
+.CurrentTemperatureContentContainer {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.CurrentTemperatureIcon {
+  width: 10.5em;
+}
+
+.CurrentTemperatureValue {
+  font-size: 5.25em;
+  font-weight: 300;
+}
+
+.CurrentTemperatureSummary {
+  margin-top: -0.5em;
+  margin-left: -0.6em;
+  text-align: center;
+  font-size: 1.125em;
+}
+
+@media screen and (min-width: 700px) {
+  .CurrentTemperature {
+    width: 50%;
+  }
+}
