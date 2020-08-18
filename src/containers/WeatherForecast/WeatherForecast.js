@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import WeatherItems from "../../components/Weather/WeatherItems/WeatherItems";
+import Aux from "../../hoc/Auxiliary";
+import WeatherSummary from "../../components/WeatherSummary/WeatherSummary";
+import Modal from "../../components/UI/Modal/Modal";
 
 class WeatherForecast extends Component {
   state = {
@@ -45,7 +48,8 @@ class WeatherForecast extends Component {
         rain: "3%",
         wind: "12mph"
       }
-    }
+    },
+    summarizing: false
   };
   changeCityHandler = id => {
     const updatedCityId = {
@@ -53,8 +57,36 @@ class WeatherForecast extends Component {
     };
     this.setState({ cityId: updatedCityId });
   };
+  summarizeHandler = () => {
+    this.setState({ summarizing: true });
+  };
+  summarizeCancelHandler = () => {
+    this.setState({ summarizing: false });
+  };
+  summarizeContinueHandler = () => {
+    //this.props.onInitPurchase();
+    //this.props.history.push("/checkout");
+    alert("You continue");
+  };
   render() {
-    return <WeatherItems next5Days={this.state.next5Days} />;
+    return (
+      <Aux>
+        <Modal
+          show={this.state.summarizing}
+          modalClosed={this.summarizeCancelHandler}
+        >
+          <WeatherSummary
+            cityId={this.state.cityId}
+            summarizeCancelled={this.summarizeCancelHandler}
+            summarizeContinued={this.summarizeContinueHandler}
+          />
+        </Modal>
+        <WeatherItems
+          next5Days={this.state.next5Days}
+          summarize={this.summarizeHandler}
+        />
+      </Aux>
+    );
   }
 }
 

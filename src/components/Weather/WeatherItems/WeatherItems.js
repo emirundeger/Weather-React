@@ -17,7 +17,7 @@ const weatherItems = props => (
       sunrise="05:27"
       sunset="05:27"
     />
-    <Next5Days next5Days={props.next5Days} />
+    <Next5Days next5Days={props.next5Days} clicked={props.summarize} />
   </Aux>
 );
 

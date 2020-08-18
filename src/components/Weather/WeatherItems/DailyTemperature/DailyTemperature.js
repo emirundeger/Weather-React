@@ -3,7 +3,7 @@ import classes from "./DailyTemperature.module.css";
 import WeatherImage from "../WeatherImage/WeatherImage";
 
 const dailyTemperature = props => (
-  <div className={classes.Next5DaysRow}>
+  <div className={classes.Next5DaysRow} onClick={props.clicked}>
     <div className={classes.Next5DaysDate}>
       {props.day}
       <div className={classes.Next5DaysLabel}>{props.date}</div>

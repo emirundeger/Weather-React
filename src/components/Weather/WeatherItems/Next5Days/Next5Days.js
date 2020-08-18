@@ -21,6 +21,7 @@ const next5Days = props => {
       high={element.detail.high}
       rain={element.detail.rain}
       wind={element.detail.wind}
+      clicked={props.clicked}
     />
   ));
 
