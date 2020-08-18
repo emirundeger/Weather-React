@@ -1,0 +1,16 @@
+/*.Content {
+  margin-top: 16px;
+}*/
+
+.Container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 920px) {
+  .Container {
+    width: 880px;
+    margin: 8px auto;
+    font-size: 1.1em;
+  }
+}
