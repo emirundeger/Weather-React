@@ -1,0 +1,10 @@
+/* location-and-date */
+.LocationAndDate {
+  width: 100%;
+}
+
+.LocationAndDateLocation {
+  margin: 0;
+  font-size: 2em;
+  font-weight: 600;
+}
