@@ -1,0 +1,22 @@
+/* Next5Days */
+.Next5Days {
+  width: 100%;
+  margin-top: 1em;
+}
+
+.Next5DaysContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Next5DaysHeading {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1em;
+  font-weight: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .Next5DaysHeading {
+    font-size: 1.125em;
+  }
+}
